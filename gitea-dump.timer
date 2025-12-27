@@ -1,0 +1,11 @@
+[Unit]
+Description=Run Gitea USB backup every 60 minutes
+
+[Timer]
+OnBootSec=1min
+OnUnitActiveSec=60min
+Persistent=true
+Unit=gitea-dump.service
+
+[Install]
+WantedBy=timers.target
