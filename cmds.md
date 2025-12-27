@@ -1,6 +1,7 @@
 #enable timer
 
 sudo systemctl daemon-reload
+
 sudo systemctl enable --now gitea-dump.timer
 
 #test timer
