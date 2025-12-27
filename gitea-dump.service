@@ -1,0 +1,10 @@
+[Unit]
+Description=Gitea dump backup to USB
+RequiresMountsFor=/media/backup
+ConditionPathIsMountPoint=/media/backup
+After=network-online.target docker.service local-fs.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=/home/aem/gitea_backup/dump_to_usb.sh
